@@ -236,10 +236,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   onChange={(e) => setBudget(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#040d1a] border border-slate-700 text-white text-sm focus:border-[#00F5FF] outline-none cursor-pointer"
                 >
-                  <option value="$300 - $600">$300 - $600 (Starter)</option>
-                  <option value="$600 - $1,500">$600 - $1,500 (Growth)</option>
-                  <option value="$1,500 - $3,000">$1,500 - $3,000 (Scale)</option>
-                  <option value="$3,000+">$3,000+ (Custom Enterprise)</option>
+                  <option value="$100 / Rs 30,000">$100 / Rs 30,000 (Paid Acquired Leads)</option>
+                  <option value="$200 / Rs 40,000">$200 / Rs 40,000 (Web Development)</option>
+                  <option value="$300 / Rs 20,000">$300 / Rs 20,000 (Payment Gateway Setup)</option>
+                  <option value="$500+ / Rs 100k+">$500+ / Rs 100k+ (Complete Enterprise Stack)</option>
                 </select>
               </div>
             </div>

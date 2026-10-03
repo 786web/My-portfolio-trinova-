@@ -203,13 +203,20 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-display font-black text-white tabular-nums">
-                    {plan.price}
-                  </span>
-                  <span className="text-xs font-mono text-slate-400">
-                    / {plan.billingPeriod}
-                  </span>
+                <div className="space-y-1">
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className="text-4xl font-display font-black text-white tabular-nums">
+                      {plan.price}
+                    </span>
+                    <span className="text-xs font-mono text-[#00F5FF] font-bold px-2.5 py-1 rounded-md bg-[#00F5FF]/10 border border-[#00F5FF]/20">
+                      {plan.billingPeriod.split('/')[0].trim()}
+                    </span>
+                  </div>
+                  {plan.billingPeriod.includes('/') && (
+                    <div className="text-[11px] font-mono text-slate-400">
+                      Billing: {plan.billingPeriod.split('/')[1]?.trim()}
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-xs text-slate-300 leading-relaxed">
