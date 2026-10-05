@@ -263,6 +263,16 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
         </div>
       </motion.section>
 
+      {/* Portfolio Attribution Signature */}
+      <div className="pt-4 text-center border-t border-slate-800/80 max-w-4xl mx-auto">
+        <p className="text-xs font-mono text-slate-400 tracking-wider">
+          created by:{' '}
+          <span className="text-[#00F5FF] font-semibold">
+            Abdulmoeen.io
+          </span>
+        </p>
+      </div>
+
     </div>
   );
 };

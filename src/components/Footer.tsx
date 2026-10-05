@@ -178,7 +178,10 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div>
-            © {currentYear} TRINOVA Digital Labs · Designed & Engineered by Abdul Moeen.
+            © {currentYear} TRINOVA Digital Labs. All rights reserved.
+          </div>
+          <div className="text-slate-300 font-medium">
+            created by <span className="text-[#00F5FF] font-bold">Abdulmoeen.io</span>
           </div>
           <div className="flex items-center gap-6">
             <button
@@ -196,6 +199,13 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
         </div>
 
+      </div>
+
+      {/* Very Bottom Signature Bar */}
+      <div className="mt-8 pt-3 pb-1 border-t border-slate-900/90 text-center">
+        <p className="text-[11px] font-mono text-slate-500 tracking-wider">
+          created by <span className="text-[#00F5FF] font-bold">Abdulmoeen.io</span>
+        </p>
       </div>
     </footer>
   );
