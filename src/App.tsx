@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Page, Project } from './types';
 import { CONTACT_INFO, PROJECTS } from './data/content';
 import { Navbar } from './components/Navbar';
@@ -11,6 +11,8 @@ import { Footer } from './components/Footer';
 import { WhatsAppFloating } from './components/WhatsAppFloating';
 import { ProjectModal } from './components/ProjectModal';
 import { Toast } from './components/Toast';
+import { AuthModal } from './components/AuthModal';
+import { supabase } from './lib/supabase';
 
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
@@ -24,6 +26,47 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isEmailCopied, setIsEmailCopied] = useState<boolean>(false);
+
+  // Authentication State
+  const [currentUserEmail, setCurrentUserEmail] = useState<string | null>(null);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
+
+  useEffect(() => {
+    // Check initial Supabase user session
+    supabase.auth.getSession().then(({ data }) => {
+      if (data?.session?.user?.email) {
+        setCurrentUserEmail(data.session.user.email);
+      }
+    });
+
+    // Listen to Supabase auth state changes
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setCurrentUserEmail(session?.user?.email || null);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  const handleOpenAuth = (mode: 'login' | 'signup') => {
+    setAuthMode(mode);
+    setIsAuthModalOpen(true);
+  };
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    setCurrentUserEmail(null);
+    setToastMessage('Signed out successfully.');
+  };
+
+  const handleAuthSuccess = (email: string) => {
+    setCurrentUserEmail(email);
+    setToastMessage(`Welcome, ${email}!`);
+  };
 
   const handleNavigate = (page: Page) => {
     setCurrentPage(page);
@@ -54,6 +97,9 @@ export default function App() {
         onNavigate={handleNavigate}
         onCopyEmail={handleCopyEmail}
         isEmailCopied={isEmailCopied}
+        currentUserEmail={currentUserEmail}
+        onOpenAuth={handleOpenAuth}
+        onSignOut={handleSignOut}
       />
 
       {/* Main Page Content */}
@@ -110,6 +156,14 @@ export default function App() {
           onRequestDemo={handleRequestDemoFromProject}
         />
       )}
+
+      {/* Authentication Modal (Login / Sign Up via Supabase) */}
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        initialMode={authMode}
+        onClose={() => setIsAuthModalOpen(false)}
+        onSuccess={handleAuthSuccess}
+      />
 
       {/* Notification Toast */}
       {toastMessage && (

@@ -12,6 +12,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { CONTACT_INFO } from '../data/content';
+import { saveLeadToSupabase } from '../lib/supabase';
 
 interface ContactPageProps {
   onCopyEmail: () => void;
@@ -29,10 +30,24 @@ export const ContactPage: React.FC<ContactPageProps> = ({
   const [budget, setBudget] = useState('$600 - $1,500');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSaving(true);
     setSubmitted(true);
+
+    // Save lead to Supabase database
+    await saveLeadToSupabase({
+      name,
+      email,
+      phone,
+      business_type: businessType,
+      budget,
+      message,
+      source: 'contact_form',
+    });
+    setIsSaving(false);
 
     const waText = encodeURIComponent(
       `Hi Abdul Moeen,\n\nInquiry from TRINOVA Website:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nBusiness Type: ${businessType}\nBudget: ${budget}\nMessage: ${message}`

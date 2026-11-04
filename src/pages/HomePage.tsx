@@ -24,6 +24,7 @@ import { Page, Project } from '../types';
 import { PROJECTS, TESTIMONIALS, CONTACT_INFO, HERO_ASSETS } from '../data/content';
 import { HeroParticleCanvas } from '../components/HeroParticleCanvas';
 import { PerformanceContrast } from '../components/PerformanceContrast';
+import { saveLeadToSupabase } from '../lib/supabase';
 
 interface HomePageProps {
   onNavigate: (page: Page) => void;
@@ -37,6 +38,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
   const [quickBiz, setQuickBiz] = useState('Shopify & E-Commerce Store');
   const [quickBudget, setQuickBudget] = useState('$600 - $1,500');
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
 
   // Rotating Dynamic Headlines
   const dynamicWords = [
@@ -60,9 +62,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
 
   const featuredProjects = PROJECTS.filter((p) => p.featured);
 
-  const handleQuickSubmit = (e: React.FormEvent) => {
+  const handleQuickSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSaving(true);
     setFormSubmitted(true);
+
+    // Save lead to Supabase database
+    await saveLeadToSupabase({
+      name: quickName,
+      phone: quickPhone,
+      business_type: quickBiz,
+      budget: quickBudget,
+      source: 'quick_lead',
+    });
+    setIsSaving(false);
+
     const waText = encodeURIComponent(
       `Hi Abdul Moeen,\n\nName: ${quickName}\nPhone: ${quickPhone}\nBusiness: ${quickBiz}\nBudget: ${quickBudget}\n\nI want to claim my Free Demo Homepage.`
     );

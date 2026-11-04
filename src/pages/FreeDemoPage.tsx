@@ -12,6 +12,7 @@ import {
   DollarSign
 } from 'lucide-react';
 import { CONTACT_INFO } from '../data/content';
+import { saveLeadToSupabase } from '../lib/supabase';
 
 export const FreeDemoPage: React.FC = () => {
   // Calculator States
@@ -27,6 +28,7 @@ export const FreeDemoPage: React.FC = () => {
   const [businessType, setBusinessType] = useState('E-Commerce & Shopify');
   const [notes, setNotes] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
 
   // Calculations
   // Estimate CPC ~$1.20
@@ -35,9 +37,24 @@ export const FreeDemoPage: React.FC = () => {
   const projectedRevenue = Math.round(estimatedConversions * avgTicket);
   const projectedROAS = adSpend > 0 ? (projectedRevenue / adSpend).toFixed(1) : '0';
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSaving(true);
     setSubmitted(true);
+
+    // Save lead to Supabase database
+    await saveLeadToSupabase({
+      name,
+      email,
+      phone,
+      business_type: businessType,
+      message: notes,
+      website_url: websiteUrl,
+      projected_ad_spend: adSpend,
+      projected_revenue: projectedRevenue,
+      source: 'free_demo',
+    });
+    setIsSaving(false);
 
     const waText = encodeURIComponent(
       `Hi Abdul Moeen,\n\nI want to claim my FREE Demo Homepage + Leads Plan!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCurrent Website: ${websiteUrl || 'New Business'}\nBusiness Type: ${businessType}\nProject Notes: ${notes}\n\nProjected Ad Spend: $${adSpend}/mo\nTarget Revenue: $${projectedRevenue}/mo`

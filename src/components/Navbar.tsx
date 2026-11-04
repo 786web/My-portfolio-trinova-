@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, MessageCircle, Mail, Menu, X, ArrowUpRight, Copy, Check } from 'lucide-react';
+import { Sparkles, MessageCircle, Mail, Menu, X, ArrowUpRight, Copy, Check, LogIn, UserPlus, LogOut, User } from 'lucide-react';
 import { Page } from '../types';
 import { CONTACT_INFO } from '../data/content';
 
@@ -8,6 +8,9 @@ interface NavbarProps {
   onNavigate: (page: Page) => void;
   onCopyEmail: () => void;
   isEmailCopied: boolean;
+  currentUserEmail?: string | null;
+  onOpenAuth: (mode: 'login' | 'signup') => void;
+  onSignOut: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -15,6 +18,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   onCopyEmail,
   isEmailCopied,
+  currentUserEmail,
+  onOpenAuth,
+  onSignOut,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -123,21 +129,47 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Zone 3: 1-2 Primary Actions */}
-          <div className="hidden sm:flex items-center gap-3">
-            <a
-              href={`mailto:${CONTACT_INFO.email}`}
-              className="px-3.5 py-2 rounded-full text-xs font-mono font-medium text-slate-300 hover:text-white bg-[#112240] hover:bg-[#1f355b] border border-slate-700 transition-colors flex items-center gap-1.5"
-            >
-              <Mail className="w-3.5 h-3.5 text-[#00F5FF]" />
-              <span>Email Us</span>
-            </a>
+          {/* Zone 3: 1-2 Primary Actions + Login / Sign Up */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            {currentUserEmail ? (
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#112240] border border-[#00F5FF]/30 text-xs font-mono text-slate-200">
+                  <User className="w-3.5 h-3.5 text-[#00F5FF]" />
+                  <span className="max-w-[120px] truncate">{currentUserEmail}</span>
+                </div>
+                <button
+                  onClick={onSignOut}
+                  title="Sign out"
+                  className="p-2 rounded-full text-slate-400 hover:text-red-400 hover:bg-[#112240] transition-colors border border-slate-700/60"
+                  aria-label="Sign out"
+                >
+                  <LogOut className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => onOpenAuth('login')}
+                  className="px-3 py-1.5 rounded-full text-xs font-mono text-slate-300 hover:text-white hover:bg-[#112240] transition-colors flex items-center gap-1"
+                >
+                  <LogIn className="w-3.5 h-3.5 text-[#00F5FF]" />
+                  <span>Log In</span>
+                </button>
+                <button
+                  onClick={() => onOpenAuth('signup')}
+                  className="px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-[#0A192F] bg-[#00F5FF] hover:bg-[#4df8ff] transition-all shadow-[0_0_12px_rgba(0,245,255,0.3)] flex items-center gap-1"
+                >
+                  <UserPlus className="w-3.5 h-3.5" />
+                  <span>Sign Up</span>
+                </button>
+              </div>
+            )}
 
             <button
               onClick={() => handleNavClick('demo')}
-              className="px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase bg-[#00F5FF] hover:bg-[#4df8ff] text-[#0A192F] shadow-[0_0_20px_rgba(0,245,255,0.4)] transition-all flex items-center gap-1.5"
+              className="px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase bg-[#112240] hover:bg-[#1f355b] text-[#00F5FF] border border-[#00F5FF]/40 hover:border-[#00F5FF] shadow-sm transition-all flex items-center gap-1.5 shrink-0"
             >
-              <span>Claim Free Demo</span>
+              <span>Free Demo</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -169,12 +201,54 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             ))}
 
-            <div className="pt-4 border-t border-slate-800 space-y-3">
+            {/* Mobile Auth actions */}
+            <div className="pt-3 border-t border-slate-800 space-y-2">
+              {currentUserEmail ? (
+                <div className="flex items-center justify-between p-3 rounded-lg bg-[#112240] border border-slate-700">
+                  <span className="text-xs font-mono text-slate-300 truncate">{currentUserEmail}</span>
+                  <button
+                    onClick={() => {
+                      onSignOut();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-xs font-mono text-red-400 hover:underline flex items-center gap-1"
+                  >
+                    <LogOut className="w-3.5 h-3.5" />
+                    <span>Logout</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => {
+                      onOpenAuth('login');
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full py-2.5 rounded-lg bg-[#112240] border border-slate-700 text-xs font-mono text-slate-200 font-semibold flex items-center justify-center gap-1.5"
+                  >
+                    <LogIn className="w-3.5 h-3.5 text-[#00F5FF]" />
+                    <span>Log In</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      onOpenAuth('signup');
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full py-2.5 rounded-lg bg-[#00F5FF] text-[#0A192F] text-xs font-mono font-bold flex items-center justify-center gap-1.5"
+                  >
+                    <UserPlus className="w-3.5 h-3.5" />
+                    <span>Sign Up</span>
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="pt-2 border-t border-slate-800 space-y-2">
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-[#112240] border border-slate-700 text-sm font-mono text-slate-200"
+                className="w-full flex items-center justify-center gap-2 p-2.5 rounded-lg bg-[#112240] border border-slate-700 text-xs font-mono text-slate-200"
               >
-                <Mail className="w-4 h-4 text-[#00F5FF]" />
+                <Mail className="w-3.5 h-3.5 text-[#00F5FF]" />
                 <span>{CONTACT_INFO.email}</span>
               </a>
 
@@ -182,9 +256,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                 href={`https://wa.me/${CONTACT_INFO.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 p-3 rounded-lg bg-emerald-500 text-slate-950 font-bold text-sm"
+                className="w-full flex items-center justify-center gap-2 p-2.5 rounded-lg bg-emerald-500 text-slate-950 font-bold text-xs"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp: {CONTACT_INFO.phone}</span>
               </a>
             </div>
