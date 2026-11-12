@@ -40,16 +40,16 @@ export const Footer: React.FC<FooterProps> = ({
             </button>
 
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Led by <span className="text-white font-medium">Abdul Moeen</span>, TRINOVA is a high-performance web development and paid traffic consultancy. We build lightning-fast Shopify & WordPress stores connected to profitable Meta & Google ad funnels.
+              Led by <span className="text-white font-medium">Abdul Moeen</span>, TRINOVA creates modern, responsive websites and digital experiences for businesses and individuals.
             </p>
 
             <div className="p-3.5 rounded-xl bg-[#112240]/40 border border-slate-800 text-xs font-mono space-y-1.5">
               <div className="flex items-center gap-2 text-[#00F5FF]">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>100% Upwork Job Success · Top Rated Agency</span>
+                <span>Independent web development · Client-focused delivery</span>
               </div>
               <div className="text-slate-400">
-                Worldwide Remote Delivery (USA, UK, UAE, Pakistan)
+                Remote collaboration · Based in Pakistan
               </div>
             </div>
           </div>
@@ -158,13 +158,13 @@ export const Footer: React.FC<FooterProps> = ({
               </a>
 
               <a
-                href={CONTACT_INFO.upworkProfile}
+                href={`mailto:${CONTACT_INFO.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-[#112240] border border-slate-700 text-slate-200 hover:border-[#00F5FF] text-xs font-mono font-bold transition-all"
               >
                 <Briefcase className="w-4 h-4 text-[#00F5FF]" />
-                <span>Upwork Pro</span>
+                <span>Email</span>
               </a>
             </div>
 
@@ -181,7 +181,7 @@ export const Footer: React.FC<FooterProps> = ({
             © {currentYear} TRINOVA Digital Labs. All rights reserved.
           </div>
           <div className="text-slate-300 font-medium">
-            created by <span className="text-[#00F5FF] font-bold">Abdulmoeen.io</span>
+            Created by <span className="text-[#00F5FF] font-bold">Abdulmoeen</span>
           </div>
           <div className="flex items-center gap-6">
             <button
@@ -204,7 +204,7 @@ export const Footer: React.FC<FooterProps> = ({
       {/* Very Bottom Signature Bar */}
       <div className="mt-8 pt-3 pb-1 border-t border-slate-900/90 text-center">
         <p className="text-[11px] font-mono text-slate-500 tracking-wider">
-          created by <span className="text-[#00F5FF] font-bold">Abdulmoeen.io</span>
+          Created by <span className="text-[#00F5FF] font-bold">Abdulmoeen</span>
         </p>
       </div>
     </footer>
