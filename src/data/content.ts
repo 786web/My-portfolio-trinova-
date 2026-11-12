@@ -241,56 +241,7 @@ export const SERVICES: ServiceItem[] = [
   },
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: 'marcus',
-    author: 'Marcus Kensington',
-    role: 'Founder & CEO',
-    company: 'Aura Luxe Fashion',
-    country: 'United Kingdom',
-    avatarText: 'MK',
-    rating: 5,
-    text: 'Abdul Moeen completely transformed our Shopify business. He rebuilt our entire store for sub-second speeds and set up our Meta ad funnel. We went from struggling to break even to over 340% ROAS within 60 days. The free demo upfront gave us 100% confidence from day one.',
-    contractType: 'Upwork Top Rated Fixed Price',
-    projectResult: '+$140k Revenue in Q3',
-  },
-  {
-    id: 'david',
-    author: 'David Sterling',
-    role: 'Managing Director',
-    company: 'Horizon Real Estate Properties',
-    country: 'Dubai & USA',
-    avatarText: 'DS',
-    rating: 5,
-    text: 'Hands down the most professional web developer and performance marketer on Upwork. Abdul took our complex luxury property platform and connected it to targeted Google Search campaigns. Our qualified leads tripled while cost-per-lead dropped by 62%. Unbeatable work ethic.',
-    contractType: 'Hourly Contract & Milestone',
-    projectResult: '$1.4M Property Deals Closed',
-  },
-  {
-    id: 'farhan',
-    author: 'Farhan Ahmed',
-    role: 'Head of Operations',
-    company: 'Retail Mart Group',
-    country: 'Pakistan',
-    avatarText: 'FA',
-    rating: 5,
-    text: 'Abdul Moeen handled our multi-vendor eCommerce setup including JazzCash and Easypaisa integration with Stripe. The zero-risk free demo proved his ability before we committed any budget. Fast delivery, 24/7 responsive on WhatsApp, and genuine expertise.',
-    contractType: 'Upwork Verified Direct Contract',
-    projectResult: '100% On-Time Delivery',
-  },
-  {
-    id: 'sarah',
-    author: 'Sarah Jenkins',
-    role: 'Co-Founder',
-    company: 'Nova Dental Health',
-    country: 'United Kingdom',
-    avatarText: 'SJ',
-    rating: 5,
-    text: 'We were skeptical about digital agencies after poor experiences with previous contractors. Abdul changed that completely. Our clinic now books 110+ new patients every month on autopilot. Truly an elite developer and growth marketer.',
-    contractType: 'Monthly Growth Retainer',
-    projectResult: '110+ Monthly Patient Bookings',
-  },
-];
+export const TESTIMONIALS: Testimonial[] = [];
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
