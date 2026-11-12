@@ -156,33 +156,33 @@ export const ContactPage: React.FC<ContactPageProps> = ({
             </a>
           </div>
 
-          {/* Card 3: Upwork Profile */}
+          {/* Card 3: Email Contact */}
           <div className="glass-card rounded-2xl p-6 border border-slate-800 space-y-4 relative overflow-hidden group">
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-xl bg-[#112240] text-[#00F5FF] flex items-center justify-center border border-slate-700">
                 <Briefcase className="w-6 h-6" />
               </div>
               <span className="text-[11px] font-mono text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded">
-                Top Rated Pro
+                Direct Contact
               </span>
             </div>
 
             <div>
-              <h3 className="text-base font-bold text-white">Upwork Direct Contract</h3>
-              <p className="text-xs text-slate-400 mt-0.5">100% Job Success score &amp; escrow safe</p>
+              <h3 className="text-base font-bold text-white">Email & Project Details</h3>
+              <p className="text-xs text-slate-400 mt-0.5">Discuss your project directly</p>
             </div>
 
             <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800 text-xs font-mono text-slate-300">
-              Contract with milestone protection
+              Clear scope, timeline and next steps
             </div>
 
             <a
-              href={CONTACT_INFO.upworkProfile}
+              href={`mailto:${CONTACT_INFO.email}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 rounded-xl bg-[#112240] hover:bg-[#1f355b] border border-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
             >
-              <span>View Upwork Profile</span>
+              <span>Send an Email</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -317,11 +317,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({
         <div className="p-6 rounded-2xl bg-[#040d1a] border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-[#00F5FF]" />
-            <span>Response guarantee: within 15 minutes</span>
+            <span>Response time may vary; WhatsApp is the quickest contact option</span>
           </div>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Upwork Top Rated &bull; Escrow Protection Guaranteed</span>
+            <span>Project scope and payment terms agreed before work begins</span>
           </div>
         </div>
       </section>
