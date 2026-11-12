@@ -114,7 +114,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
                 <span className="font-semibold tracking-wide">
-                  Abdul Moeen · Web Developer &amp; Performance Marketer · Upwork Top Rated
+                  Abdulmoeen · Independent Web Developer · TRINOVA
                 </span>
               </div>
 
@@ -169,19 +169,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                 </button>
               </div>
 
-              {/* Verified Trust Strip */}
+              {/* What You Can Expect */}
               <div className="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-6">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black font-display text-white tabular-nums">50+</div>
-                  <div className="text-xs font-mono text-slate-400 mt-0.5">Stores &amp; Portals Shipped</div>
+                  <div className="text-2xl sm:text-3xl font-black font-display text-white tabular-nums">Responsive</div>
+                  <div className="text-xs font-mono text-slate-400 mt-0.5">Mobile-first websites</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black font-display text-[#00F5FF] tabular-nums">$1.8M+</div>
-                  <div className="text-xs font-mono text-slate-400 mt-0.5">Client Sales Generated</div>
+                  <div className="text-2xl sm:text-3xl font-black font-display text-[#00F5FF] tabular-nums">Modern</div>
+                  <div className="text-xs font-mono text-slate-400 mt-0.5">Clean user experiences</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black font-display text-emerald-400 tabular-nums">100%</div>
-                  <div className="text-xs font-mono text-slate-400 mt-0.5">Upwork Job Success</div>
+                  <div className="text-2xl sm:text-3xl font-black font-display text-emerald-400 tabular-nums">Direct</div>
+                  <div className="text-xs font-mono text-slate-400 mt-0.5">Clear communication</div>
                 </div>
               </div>
 
@@ -284,7 +284,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                       <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800 flex items-center justify-between">
                         <div>
                           <div className="text-slate-400">Attributed ROAS</div>
-                          <div className="text-xl font-bold text-emerald-400">+340% Avg</div>
+                          <div className="text-xl font-bold text-emerald-400">Demo metric</div>
                         </div>
                         <div className="text-right">
                           <div className="text-slate-400">Event Match Quality</div>
@@ -360,13 +360,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
         </div>
       </section>
 
-      {/* 2. ZERO RISK GUARANTEE BANNER */}
+      {/* 2. FREE DEMO OPTION */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl p-8 sm:p-10 border-2 border-[#00F5FF] bg-gradient-to-r from-[#040d1a] via-[#0A192F] to-[#040d1a] neon-border-glow">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
             <div className="max-w-2xl space-y-2">
               <div className="inline-flex items-center gap-1.5 text-xs font-mono text-[#00F5FF] font-semibold uppercase tracking-wider">
-                <Sparkles className="w-4 h-4" /> Zero-Risk Founder Guarantee
+                <Sparkles className="w-4 h-4" /> Free Demo Option
               </div>
               <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
                 "I will build your custom demo homepage and show you the exact leads plan. You pay only if you love it."
@@ -590,10 +590,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <span className="text-xs font-mono font-bold tracking-widest text-[#00F5FF] uppercase">
-            03. Verified Feedback
+            03. Client Feedback
           </span>
           <h2 className="text-3xl font-display font-black text-white mt-1">
-            Client Words on Upwork
+            Project feedback
           </h2>
         </div>
 
