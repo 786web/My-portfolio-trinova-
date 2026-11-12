@@ -20,6 +20,7 @@ import { PortfolioPage } from './pages/PortfolioPage';
 import { FreeDemoPage } from './pages/FreeDemoPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { DashboardPage } from './pages/DashboardPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<Page>('home');
@@ -29,22 +30,29 @@ export default function App() {
 
   // Authentication State
   const [currentUserEmail, setCurrentUserEmail] = useState<string | null>(null);
+  const [currentUserId, setCurrentUserId] = useState<string | null>(null);
+  const [userRole, setUserRole] = useState<'admin' | 'client' | null>(null);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
 
   useEffect(() => {
-    // Check initial Supabase user session
-    supabase.auth.getSession().then(({ data }) => {
-      if (data?.session?.user?.email) {
-        setCurrentUserEmail(data.session.user.email);
+    const loadUser = async (user: any) => {
+      if (!user) {
+        setCurrentUserEmail(null);
+        setCurrentUserId(null);
+        setUserRole(null);
+        return;
       }
-    });
-
-    // Listen to Supabase auth state changes
+      setCurrentUserEmail(user.email || null);
+      setCurrentUserId(user.id);
+      const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single();
+      setUserRole(data?.role === 'admin' ? 'admin' : 'client');
+    };
+    supabase.auth.getSession().then(({ data }) => loadUser(data.session?.user || null));
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
-      setCurrentUserEmail(session?.user?.email || null);
+      void loadUser(session?.user || null);
     });
 
     return () => {
@@ -60,6 +68,9 @@ export default function App() {
   const handleSignOut = async () => {
     await supabase.auth.signOut();
     setCurrentUserEmail(null);
+    setCurrentUserId(null);
+    setUserRole(null);
+    setCurrentPage('home');
     setToastMessage('Signed out successfully.');
   };
 
@@ -100,6 +111,7 @@ export default function App() {
         currentUserEmail={currentUserEmail}
         onOpenAuth={handleOpenAuth}
         onSignOut={handleSignOut}
+        userRole={userRole}
       />
 
       {/* Main Page Content */}
@@ -128,6 +140,10 @@ export default function App() {
 
         {currentPage === 'about' && (
           <AboutPage onNavigate={handleNavigate} />
+        )}
+
+        {currentPage === 'dashboard' && currentUserId && userRole && (
+          <DashboardPage userId={currentUserId} role={userRole} />
         )}
 
         {currentPage === 'contact' && (
