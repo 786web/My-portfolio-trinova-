@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-3 text-[#4df8ff]">
             <span className="flex items-center gap-1.5 font-semibold tracking-wide">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              TOP RATED AGENCY ON UPWORK · 100% JOB SUCCESS
+              INDEPENDENT WEB DEVELOPER · OPEN FOR PROJECTS
             </span>
             <span className="text-slate-600 hidden lg:inline">|</span>
             <span className="hidden lg:inline text-xs text-slate-300">
