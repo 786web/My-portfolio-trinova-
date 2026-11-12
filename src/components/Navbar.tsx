@@ -11,6 +11,7 @@ interface NavbarProps {
   currentUserEmail?: string | null;
   onOpenAuth: (mode: 'login' | 'signup') => void;
   onSignOut: () => void;
+  userRole?: 'admin' | 'client' | null;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -21,6 +22,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   currentUserEmail,
   onOpenAuth,
   onSignOut,
+  userRole,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,6 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'demo', label: 'Free Demo', highlight: true },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
+    ...(currentUserEmail ? [{ id: 'dashboard' as Page, label: userRole === 'admin' ? 'Admin Panel' : 'My Dashboard' }] : []),
   ];
 
   const handleNavClick = (page: Page) => {
