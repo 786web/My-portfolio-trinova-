@@ -48,6 +48,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             data: {
               full_name: fullName.trim(),
             },
+            emailRedirectTo: window.location.origin,
           },
         });
 
