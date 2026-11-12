@@ -49,12 +49,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           setSuccessNotice(
             data.session
               ? 'Account created and signed in successfully!'
-              : 'Signup successful! Please check your email to confirm your account (if confirmation is required in your Supabase project).'
+              : 'Signup successful! Please confirm your email, then log in.'
           );
-          setTimeout(() => {
-            onSuccess(email.trim());
-            onClose();
-          }, 1200);
+          if (data.session) {
+            setTimeout(() => {
+              onSuccess(email.trim());
+              onClose();
+            }, 900);
+          }
         }
       } else {
         const { data, error } = await supabase.auth.signInWithPassword({
