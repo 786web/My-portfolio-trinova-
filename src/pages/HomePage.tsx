@@ -586,54 +586,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
         </div>
       </section>
 
-      {/* 7. CLIENT TESTIMONIALS */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <span className="text-xs font-mono font-bold tracking-widest text-[#00F5FF] uppercase">
-            03. Client Feedback
-          </span>
-          <h2 className="text-3xl font-display font-black text-white mt-1">
-            Project feedback
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {TESTIMONIALS.slice(0, 2).map((test) => (
-            <div
-              key={test.id}
-              className="glass-card rounded-2xl p-6 border border-slate-800 space-y-4 flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(test.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                    {test.contractType}
-                  </span>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
-                  "{test.text}"
-                </p>
-              </div>
-
-              <div className="pt-3 border-t border-slate-800 flex items-center justify-between">
-                <div>
-                  <div className="text-sm font-bold text-white">{test.author}</div>
-                  <div className="text-xs text-slate-400">{test.role}, {test.company} ({test.country})</div>
-                </div>
-                <div className="text-xs font-mono font-bold text-[#00F5FF]">
-                  {test.projectResult}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* 8. QUICK LEAD SUBMIT FORM */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass-card rounded-2xl p-8 border border-[#00F5FF]/30 space-y-6">
