@@ -58,7 +58,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#112240] text-xs font-mono text-[#00F5FF]">
               <Award className="w-4 h-4 text-[#00F5FF]" />
-              <span>100% Job Success on Upwork · Top Rated</span>
+              <span>Independent Web Developer</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-display font-black text-white">
@@ -70,24 +70,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              At TRINOVA, we bridge that divide. Every Shopify and WordPress platform is constructed with obsessive speed optimization (95+ Core Web Vitals) and seamless 1-click checkout mechanisms, configured directly to convert incoming traffic from Meta, Google, and TikTok.
+              At TRINOVA, we bridge that divide. Every Shopify and WordPress platform is constructed with obsessive speed optimization (performance-conscious development) and seamless 1-click checkout mechanisms, configured directly to convert incoming traffic from Meta, Google, and TikTok.
             </p>
 
             {/* Core Stats */}
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800">
               <div className="p-3.5 rounded-xl bg-[#112240] border border-slate-800 text-center">
-                <div className="text-2xl font-bold font-display text-[#00F5FF] tabular-nums">50+</div>
-                <div className="text-[11px] font-mono text-slate-400 mt-1">Stores &amp; Portals Shipped</div>
+                <div className="text-2xl font-bold font-display text-[#00F5FF] tabular-nums">Responsive</div>
+                <div className="text-[11px] font-mono text-slate-400 mt-1">Mobile-first design</div>
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#112240] border border-slate-800 text-center">
-                <div className="text-2xl font-bold font-display text-white tabular-nums">$1.8M+</div>
-                <div className="text-[11px] font-mono text-slate-400 mt-1">Client Sales Generated</div>
+                <div className="text-2xl font-bold font-display text-white tabular-nums">Modern</div>
+                <div className="text-[11px] font-mono text-slate-400 mt-1">Clean interfaces</div>
               </div>
 
               <div className="p-3.5 rounded-xl bg-[#112240] border border-slate-800 text-center">
-                <div className="text-2xl font-bold font-display text-emerald-400 tabular-nums">100%</div>
-                <div className="text-[11px] font-mono text-slate-400 mt-1">Upwork Escrow Safe</div>
+                <div className="text-2xl font-bold font-display text-emerald-400 tabular-nums">Direct</div>
+                <div className="text-[11px] font-mono text-slate-400 mt-1">Client communication</div>
               </div>
             </div>
 
