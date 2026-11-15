@@ -99,7 +99,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: window.location.origin,
+          // Always return OAuth users to the canonical production site.
+          redirectTo: 'https://my-portfolio-trinova.vercel.app/',
+          // Let each visitor choose their own Google account on shared devices.
+          queryParams: {
+            prompt: 'select_account',
+          },
         },
       });
 
