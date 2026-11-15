@@ -36,26 +36,57 @@ export default function App() {
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
 
   useEffect(() => {
-    const loadUser = async (user: any) => {
+    let mounted = true;
+    let roleLookupId = 0;
+
+    // Keep the navbar in sync with Supabase's initial session and OAuth sign-in.
+    // Do not await another Supabase request inside onAuthStateChange: that can
+    // hold the auth lock and interfere with session processing.
+    const applyUser = (user: any) => {
+      if (!mounted) return;
+      const lookupId = ++roleLookupId;
+
       if (!user) {
         setCurrentUserEmail(null);
         setCurrentUserId(null);
         setUserRole(null);
         return;
       }
+
       setCurrentUserEmail(user.email || null);
       setCurrentUserId(user.id);
-      const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single();
-      setUserRole(data?.role === 'admin' ? 'admin' : 'client');
+      setUserRole('client');
+
+      // Run the profile lookup after the auth callback has returned.
+      window.setTimeout(async () => {
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('role')
+          .eq('id', user.id)
+          .maybeSingle();
+
+        if (mounted && lookupId === roleLookupId) {
+          setUserRole(!error && data?.role === 'admin' ? 'admin' : 'client');
+        }
+      }, 0);
     };
-    supabase.auth.getSession().then(({ data }) => loadUser(data.session?.user || null));
+
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      void loadUser(session?.user || null);
+    } = supabase.auth.onAuthStateChange((event, session) => {
+      if (
+        event === 'INITIAL_SESSION' ||
+        event === 'SIGNED_IN' ||
+        event === 'SIGNED_OUT' ||
+        event === 'TOKEN_REFRESHED' ||
+        event === 'USER_UPDATED'
+      ) {
+        applyUser(session?.user || null);
+      }
     });
 
     return () => {
+      mounted = false;
       subscription.unsubscribe();
     };
   }, []);
