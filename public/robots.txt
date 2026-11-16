@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-portfolio-trinova.vercel.app/sitemap.xml
+Sitemap: https://trinova-portfolio.devs.surf/sitemap.xml
