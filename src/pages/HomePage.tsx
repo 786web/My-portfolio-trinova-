@@ -194,7 +194,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
               transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="lg:col-span-5 relative"
             >
-              <div className="rounded-2xl border border-[#00F5FF]/40 bg-[#0A192F]/90 backdrop-blur-xl shadow-[0_0_40px_rgba(0,245,255,0.25)] overflow-hidden">
+              {/* Lightweight CSS 3D holographic object */}
+              <div className="trinova-3d-stage absolute -top-28 right-4 sm:right-10 z-20 pointer-events-none" aria-hidden="true">
+                <div className="trinova-3d-object">
+                  <div className="trinova-3d-aura" />
+                  <div className="trinova-3d-core">
+                    <span className="trinova-3d-highlight" />
+                    <span className="trinova-3d-latitude" />
+                  </div>
+                  <div className="trinova-3d-ring trinova-3d-ring-one" />
+                  <div className="trinova-3d-ring trinova-3d-ring-two" />
+                  <span className="trinova-3d-node trinova-3d-node-one" />
+                  <span className="trinova-3d-node trinova-3d-node-two" />
+                </div>
+              </div>
+
+              <div className="relative z-10 rounded-2xl border border-[#00F5FF]/40 bg-[#0A192F]/90 backdrop-blur-xl shadow-[0_0_40px_rgba(0,245,255,0.25)] overflow-hidden">
                 
                 {/* Terminal Header */}
                 <div className="px-4 py-3 bg-[#112240] border-b border-slate-800 flex items-center justify-between">
