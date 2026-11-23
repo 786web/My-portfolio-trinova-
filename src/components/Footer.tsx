@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => handleNav('services')}
                   className="text-slate-400 hover:text-[#00F5FF] transition-colors"
                 >
-                  Engineering & Ads Services
+                  Website & Lead Capture Services
                 </button>
               </li>
               <li>
