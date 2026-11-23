@@ -301,13 +301,13 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 5. Bottom Guarantee */}
+      {/* 5. Custom Project CTA */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 rounded-2xl bg-gradient-to-r from-[#112240] to-[#040d1a] border border-[#00F5FF]/30 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <ShieldCheck className="w-10 h-10 text-[#00F5FF] shrink-0" />
             <div>
-              <h4 className="text-lg font-bold text-white">Need a Custom Scope or Upwork Contract?</h4>
+              <h4 className="text-lg font-bold text-white">Need a Custom Website or Feature?</h4>
               <p className="text-xs text-slate-300">
                 Contact Abdul Moeen directly via email ({CONTACT_INFO.email}) or WhatsApp for a customized quote.
               </p>
