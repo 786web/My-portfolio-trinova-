@@ -63,3 +63,107 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #00F5FF;
 }
+
+
+/* TRINOVA hero: lightweight CSS 3D holographic animation */
+.trinova-3d-stage {
+  width: 176px;
+  height: 176px;
+  perspective: 850px;
+  transform-style: preserve-3d;
+}
+.trinova-3d-object {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: trinova-3d-float 6s ease-in-out infinite;
+}
+.trinova-3d-aura {
+  position: absolute;
+  inset: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,245,255,.24), rgba(37,99,235,.12) 48%, transparent 72%);
+  filter: blur(12px);
+  transform: translateZ(-24px);
+}
+.trinova-3d-core {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  left: 44px;
+  top: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 32% 26%, #e0ffff 0%, #55f5ff 8%, #087eaa 32%, #102d68 66%, #071426 100%);
+  border: 1px solid rgba(173,250,255,.8);
+  box-shadow: inset -12px -14px 24px rgba(2,8,30,.75), inset 8px 8px 18px rgba(255,255,255,.25), 0 0 24px rgba(0,245,255,.55), 0 0 60px rgba(0,145,255,.22);
+  transform: translateZ(18px);
+}
+.trinova-3d-highlight {
+  position: absolute;
+  width: 32px;
+  height: 18px;
+  top: 13px;
+  left: 15px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.68);
+  filter: blur(8px);
+  transform: rotate(-35deg);
+}
+.trinova-3d-latitude {
+  position: absolute;
+  inset: 18px -12px;
+  border: 1px solid rgba(148,247,255,.45);
+  border-radius: 50%;
+  transform: rotate(-28deg);
+}
+.trinova-3d-ring {
+  position: absolute;
+  inset: 20px 4px;
+  border: 1px solid rgba(0,245,255,.8);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0,245,255,.2), inset 0 0 10px rgba(0,245,255,.12);
+  transform-style: preserve-3d;
+}
+.trinova-3d-ring-one {
+  transform: rotateX(68deg) rotateZ(-24deg) translateZ(8px);
+  animation: trinova-ring-spin 12s linear infinite;
+}
+.trinova-3d-ring-two {
+  inset: 12px 22px;
+  border-color: rgba(96,165,250,.72);
+  transform: rotateY(68deg) rotateZ(34deg);
+  animation: trinova-ring-spin-reverse 15s linear infinite;
+}
+.trinova-3d-node {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d9ffff;
+  box-shadow: 0 0 9px 3px rgba(0,245,255,.8);
+}
+.trinova-3d-node-one { top: 23px; right: 32px; }
+.trinova-3d-node-two { bottom: 24px; left: 28px; width: 6px; height: 6px; background: #60a5fa; }
+@keyframes trinova-3d-float {
+  0%, 100% { transform: translateY(0) rotateX(-5deg) rotateY(8deg); }
+  50% { transform: translateY(-12px) rotateX(5deg) rotateY(-8deg); }
+}
+@keyframes trinova-ring-spin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+@keyframes trinova-ring-spin-reverse {
+  from { rotate: 0deg; }
+  to { rotate: -360deg; }
+}
+@media (max-width: 640px) {
+  .trinova-3d-stage { width: 142px; height: 142px; top: -92px; right: 8px; }
+  .trinova-3d-core { width: 72px; height: 72px; left: 35px; top: 35px; }
+  .trinova-3d-ring-one { inset: 18px 2px; }
+  .trinova-3d-ring-two { inset: 10px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trinova-3d-object, .trinova-3d-ring-one, .trinova-3d-ring-two { animation: none; }
+}
