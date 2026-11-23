@@ -269,8 +269,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({
               >
                 <option value="Shopify & E-Commerce Store">Shopify &amp; D2C E-Commerce</option>
                 <option value="WordPress Custom Platform">WordPress Custom Platform</option>
-                <option value="Paid Ad Funnels (Meta / Google)">Paid Ad Funnels (Meta / Google)</option>
-                <option value="Payment Gateway Integration (Stripe / JazzCash)">Payment Gateway Integration</option>
+                <option value="Landing Pages & Lead Capture">Landing Pages &amp; Lead Capture</option>
+                <option value="E-commerce & Order Flow">E-commerce &amp; Order Flow</option>
                 <option value="Speed Optimization & CRO">Speed Optimization &amp; CRO</option>
                 <option value="Other Custom Request">Other Custom Request</option>
               </select>
