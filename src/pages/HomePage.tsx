@@ -36,17 +36,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
   const [quickName, setQuickName] = useState('');
   const [quickPhone, setQuickPhone] = useState('');
   const [quickBiz, setQuickBiz] = useState('Shopify & E-Commerce Store');
-  const [quickBudget, setQuickBudget] = useState('$600 - $1,500');
+  const [quickBudget, setQuickBudget] = useState('Not sure yet');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
   // Rotating Dynamic Headlines
   const dynamicWords = [
-    'High-ROAS Shopify Stores',
+    'Conversion-focused Shopify Stores',
     'Custom WordPress Portals',
-    'Sub-Second PageSpeed (99/100)',
+    'Performance-conscious Website Builds',
     'Meta & Google Paid Funnels',
-    'JazzCash & Stripe Checkouts'
+    'Local Payment & Checkout Flows'
   ];
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
 
@@ -147,7 +147,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
               </div>
 
               <p className="text-slate-300 text-sm sm:text-base max-w-xl font-light leading-relaxed">
-                Custom high-performance Shopify &amp; WordPress storefronts backed by hyper-targeted Meta &amp; Google ad funnels built to generate qualified leads and verified revenue.
+                Responsive Shopify and WordPress websites with clear product presentation, useful inquiry flows, and optional analytics or advertising integrations.
               </p>
 
               {/* Action Buttons */}
@@ -164,7 +164,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   onClick={() => onNavigate('portfolio')}
                   className="px-8 py-4 rounded-xl bg-[#112240] hover:bg-[#1f355b] border border-slate-700 hover:border-[#00F5FF]/60 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"
                 >
-                  <span>Explore Case Studies</span>
+                  <span>Explore Website Concepts</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -208,7 +208,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   </div>
 
                   <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                    Live Status: Ready
+                    Architecture Preview
                   </span>
                 </div>
 
@@ -416,7 +416,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                 High-Velocity Web Development
               </h3>
               <p className="text-sm text-slate-300 mt-2 leading-relaxed">
-                Custom Shopify &amp; WordPress builds optimized for sub-second speeds (95+ Core Web Vitals) and zero-friction checkouts.
+                Responsive Shopify and WordPress builds with clear navigation, accessible content, and a streamlined checkout experience.
               </p>
             </div>
 
@@ -647,10 +647,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   onChange={(e) => setQuickBudget(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#040d1a] border border-slate-700 text-white text-sm focus:border-[#00F5FF] outline-none cursor-pointer"
                 >
-                  <option value="$100 / Rs 30,000">$100 / Rs 30,000 (Paid Acquired Leads)</option>
-                  <option value="$200 / Rs 40,000">$200 / Rs 40,000 (Web Development)</option>
-                  <option value="$300 / Rs 20,000">$300 / Rs 20,000 (Payment Gateway Setup)</option>
-                  <option value="$500+ / Rs 100k+">$500+ / Rs 100k+ (Complete Enterprise Stack)</option>
+                  <option value="Rs 25,000–50,000">Rs 25,000–50,000 (Paid Acquired Leads)</option>
+                  <option value="Rs 50,000–100,000">Rs 50,000–100,000 (Web Development)</option>
+                  <option value="Under Rs 25,000">Under Rs 25,000 (Payment Gateway Setup)</option>
+                  <option value="Rs 100,000+">Rs 100,000+ (Complete Enterprise Stack)</option>
                 </select>
               </div>
             </div>
