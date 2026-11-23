@@ -31,7 +31,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           Meet Abdul Moeen
         </h1>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-          Senior Web Developer &amp; Performance Marketer trusted by founders across the UK, USA, UAE, and Pakistan to engineer high-velocity digital revenue engines.
+          Independent web developer focused on building responsive websites, clear user journeys, and practical digital experiences for businesses.
         </p>
       </section>
 
@@ -50,7 +50,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/30 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-card border border-[#00F5FF]/20">
                 <div className="text-sm font-bold text-white">Abdul Moeen</div>
-                <div className="text-xs font-mono text-[#00F5FF]">Founder &amp; Principal Solutions Engineer</div>
+                <div className="text-xs font-mono text-[#00F5FF]">Independent Web Developer</div>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             Sprint Methodology
           </span>
           <h2 className="text-3xl font-display font-black text-white mt-1">
-            How We Deliver in 7 to 14 Days
+            A Clear, Collaborative Project Workflow
           </h2>
         </div>
 
@@ -165,7 +165,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         <div className="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800 space-y-8">
           <div className="text-center space-y-2">
             <h3 className="text-2xl font-bold font-display text-white">
-              Verified Technical Stack &amp; Tooling
+              Tools &amp; Technologies
             </h3>
             <p className="text-xs text-slate-400">
               Only battle-tested, modern, and production-ready technologies.
