@@ -1,7 +1,6 @@
 import React from 'react';
 import { X, ArrowRight } from 'lucide-react';
 import { Project } from '../types';
-import { CONTACT_INFO } from '../data/content';
 
 interface ProjectModalProps {
   project: Project | null;
