@@ -151,7 +151,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'High-Velocity Web Development',
     subtitle: 'WordPress, Shopify & Bespoke Modern Stacks',
     badge: 'Core Engine',
-    description: 'We construct blazingly fast, high-converting digital storefronts and corporate websites engineered specifically to convert cold visitors into buyers.',
+    description: 'We build responsive business websites and online stores with clear navigation, product presentation, and practical inquiry or checkout flows.',
     features: [
       'Custom Shopify & Shopify Plus Theme Development',
       'High-Performance WordPress with ACF Pro & Custom Gutenberg Blocks',
@@ -168,7 +168,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     timeline: '7 to 14 Days',
     technologies: ['WordPress', 'Shopify Liquid', 'React / Next.js', 'Tailwind CSS', 'PHP', 'TypeScript'],
-    startingPrice: 'Rs 40,000',
+    startingPrice: 'Custom quote',
   },
   {
     id: 'lead-generation',
@@ -184,22 +184,22 @@ export const SERVICES: ServiceItem[] = [
       'A/B Tested High-Converting Landing Page Design',
     ],
     deliverables: [
-      'Complete Ad Account Audit & Tracking Setup',
+      'Ad account and tracking review, subject to access and permissions',
       'Custom Ad Creative Copywriting & Angle Strategy',
       'Dedicated High-Converting Landing Page Funnel',
       'Live Transparent Reporting Dashboard',
-      'Bi-Weekly Strategic Optimization Calls',
+      'Review meetings at an agreed schedule',
     ],
     timeline: 'Continuous Monthly Sprints (Setup in 5 Days)',
     technologies: ['Meta Business Suite', 'Google Ads', 'TikTok Ads', 'Meta CAPI', 'GTM Server-Side'],
-    startingPrice: 'Rs 30,000',
+    startingPrice: 'Custom quote',
   },
   {
     id: 'payments-checkout',
     title: 'Payment Gateway Integrations',
     subtitle: 'Frictionless Global & Local Checkout Solutions',
     badge: 'Fintech & Checkout',
-    description: 'Seamlessly accept payments from any country. We integrate leading global processors alongside regional Pakistani & Middle Eastern payment channels.',
+    description: 'We help plan suitable order and payment flows. Any payment-provider integration is confirmed only after checking merchant eligibility, provider approval, and technical access.',
     features: [
       'Supported international payment integrations, subject to merchant eligibility and provider approval',
       'Supported local payment integrations, subject to provider approval and technical access',
@@ -208,14 +208,14 @@ export const SERVICES: ServiceItem[] = [
       'Invoice and receipt workflows where supported by the selected platform',
     ],
     deliverables: [
-      'Fully Tested Live Gateway Integration in Sandbox & Production',
-      'Webhook Handlers for Instant Order Confirmation',
+      'Payment integration and testing based on provider access and available test environment',
+      'Order confirmation workflows where supported by the selected platform',
       'One-Page Frictionless Checkout Template',
-      'Security Compliance Audit',
+      'Basic integration and configuration checks; formal compliance audits are out of scope unless separately agreed',
     ],
     timeline: '2 to 4 Days',
     technologies: ['Stripe API', 'JazzCash Gateway', 'Easypaisa API', 'PayPal SDK', 'Webhooks'],
-    startingPrice: 'Rs 20,000',
+    startingPrice: 'Custom quote',
   },
   {
     id: 'speed-cro',
@@ -237,7 +237,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     timeline: '3 to 5 Days',
     technologies: ['Core Web Vitals', 'Cloudflare CDN', 'WP Rocket / Nitro', 'Liquid Optimization'],
-    startingPrice: 'Rs 25,000',
+    startingPrice: 'Custom quote',
   },
 ];
 
@@ -246,8 +246,8 @@ export const TESTIMONIALS: Testimonial[] = [];
 export const PRICING_PLANS: PricingPlan[] = [
   {
     name: 'Web Development Launch',
-    price: 'Rs 40,000',
-    billingPeriod: 'One-time · final scope confirmed before work begins',
+    price: 'Custom',
+    billingPeriod: 'Quote based on agreed project scope',
     description: 'A responsive WordPress or Shopify website with a clear scope, technical SEO basics, and performance-conscious implementation.',
     bestFor: 'Startups, D2C Stores & Corporate Brands',
     features: [
@@ -262,10 +262,10 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Paid Acquired Leads',
-    price: 'Rs 30,000',
-    billingPeriod: 'Per campaign sprint · scope agreed in advance',
+    price: 'Custom',
+    billingPeriod: 'Quote based on agreed campaign scope',
     popular: true,
-    description: 'Hyper-targeted Meta & Google ad funnels connected to server-side CAPI tracking to bring paying customers.',
+    description: 'Campaign planning and setup can be scoped around your audience, landing page, available budget, and the tracking access provided.',
     bestFor: 'E-Commerce Brands & Service Leads Seekers',
     features: [
       'Campaign setup for selected Meta or Google advertising channels',
@@ -279,9 +279,9 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Payment Gateway Integration',
-    price: 'Rs 20,000',
-    billingPeriod: 'One-time · subject to provider access and scope',
-    description: 'Turnkey integration of international gateways (Stripe, PayPal) and Pakistani regional gateways (JazzCash, Easypaisa).',
+    price: 'Custom',
+    billingPeriod: 'Quote based on provider access and scope',
+    description: 'Review suitable payment-provider options and implement supported integrations after merchant eligibility and account access are confirmed.',
     bestFor: 'Local & Global E-Commerce Storefronts',
     features: [
       'Supported international payment integration, subject to merchant eligibility',
