@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, CheckCircle, ExternalLink, ArrowRight, ShieldCheck } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
 import { Project } from '../types';
 import { CONTACT_INFO } from '../data/content';
 
@@ -50,7 +50,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 {project.title}
               </h3>
               <p className="text-xs text-slate-300 font-mono mt-0.5">
-                Client: {project.client} · {project.country}
+                Project type: {project.client} · {project.country}
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           {/* Tech Stack */}
           <div>
             <h4 className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3">
-              Technologies & Tools Implemented
+              Suggested Technologies &amp; Tools
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech, idx) => (
@@ -121,14 +121,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
           </div>
 
-          {/* Verified Guarantee */}
-          <div className="p-4 rounded-xl bg-gradient-to-r from-[#112240] to-[#040d1a] border border-[#00F5FF]/20 flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="w-6 h-6 text-[#00F5FF] shrink-0" />
-              <div>
-                <div className="text-xs font-bold text-white">Upwork Verified Delivery</div>
-                <div className="text-[11px] text-slate-400">100% Job Success score by Abdul Moeen</div>
-              </div>
+          {/* Concept project notice */}
+          <div className="p-4 rounded-xl bg-[#112240]/60 border border-slate-700 flex items-center justify-between flex-wrap gap-4">
+            <div className="text-xs text-slate-300 leading-relaxed max-w-md">
+              This is an illustrative concept project, not a claim of a completed client engagement or measured business result.
             </div>
 
             <button
