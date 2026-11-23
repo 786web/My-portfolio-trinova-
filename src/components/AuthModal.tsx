@@ -20,6 +20,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [successNotice, setSuccessNotice] = useState<string | null>(null);
 
@@ -28,6 +29,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       setMode(initialMode);
       setErrorMsg(null);
       setSuccessNotice(null);
+      setLoading(false);
+      setGoogleLoading(false);
     }
   }, [isOpen, initialMode]);
 
@@ -93,7 +96,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const handleGoogleSignIn = async () => {
     setErrorMsg(null);
     setSuccessNotice(null);
-    setLoading(true);
+    setGoogleLoading(true);
 
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -110,11 +113,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       if (error) {
         setErrorMsg(error.message);
-        setLoading(false);
+        setGoogleLoading(false);
       }
     } catch (err: any) {
       setErrorMsg(err?.message || 'Google sign-in failed. Please try again.');
-      setLoading(false);
+      setGoogleLoading(false);
     }
   };
 
@@ -156,7 +159,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         <div className="grid grid-cols-2 p-1 bg-[#112240] rounded-xl border border-slate-800 mb-5 text-xs font-mono">
           <button
             type="button"
-            disabled={loading}
+            disabled={loading || googleLoading}
             onClick={() => {
               setMode('login');
               setErrorMsg(null);
@@ -297,7 +300,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <button
             type="button"
             onClick={handleGoogleSignIn}
-            disabled={loading}
+            disabled={loading || googleLoading}
             className="w-full py-3 rounded-xl bg-white hover:bg-slate-100 disabled:opacity-50 text-slate-800 font-semibold text-xs transition-all flex items-center justify-center gap-3 border border-slate-300"
           >
             <svg aria-hidden="true" viewBox="0 0 48 48" className="w-4 h-4">
@@ -306,7 +309,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               <path fill="#FBBC05" d="M10.54 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.52 2.56 10.78l7.98-6.19Z" />
               <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.9-5.8l-7.73-6c-2.14 1.44-4.89 2.3-8.17 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z" />
             </svg>
-            <span>{loading ? 'Connecting securely...' : 'Continue with Google'}</span>
+            <span>{googleLoading ? 'Connecting securely...' : 'Continue with Google'}</span>
           </button>
         </div>
 
@@ -317,7 +320,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               Don't have an account yet?{' '}
               <button
                 type="button"
-                disabled={loading}
+                disabled={loading || googleLoading}
                 onClick={() => {
                   setMode('signup');
                   setErrorMsg(null);
