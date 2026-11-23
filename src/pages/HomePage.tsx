@@ -120,11 +120,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
 
               {/* Main Headline */}
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-black tracking-tight text-white leading-[1.08]">
-                We Build Websites That Bring <br />
+                We Build Websites That Help Your Business <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5FF] via-[#4df8ff] to-sky-300 drop-shadow-[0_0_25px_rgba(0,245,255,0.4)]">
-                  Better Customer Journeys,
+                  Look Professional Online.
                 </span>{' '}
-                Not Just Clicks.
+
               </h1>
 
               {/* Dynamic Rotating Headline */}
