@@ -49,13 +49,13 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
         className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4"
       >
         <span className="text-xs font-mono font-bold tracking-widest text-[#00F5FF] uppercase">
-          Client Case Studies &amp; Delivered Platforms
+          Selected Work &amp; Concept Projects
         </span>
         <h1 className="text-4xl sm:text-5xl font-display font-black text-white">
-          Engineered for Real Conversion
+          Website Concepts Built Around Real Business Needs
         </h1>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-          Explore our recent live deployments across UK, USA, Dubai, and Pakistan. Each project solved a specific bottleneck to drive verifiable sales and leads.
+          These are illustrative concept projects created to demonstrate layout, user experience, and possible functionality. They are not presented as paid client deployments or measured business results.
         </p>
       </motion.section>
 
@@ -224,7 +224,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
                       onClick={() => onOpenProject(project)}
                       className="w-full py-2.5 rounded-xl bg-[#112240] hover:bg-[#00F5FF] hover:text-[#0A192F] text-xs font-mono font-bold tracking-wider uppercase transition-all border border-slate-700 flex items-center justify-center gap-1.5"
                     >
-                      <span>View Full Case Study</span>
+                      <span>View Project Details</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -247,7 +247,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
         <div className="glass-card rounded-2xl p-8 border border-[#00F5FF]/30 text-center space-y-4">
           <Sparkles className="w-6 h-6 text-[#00F5FF] mx-auto" />
           <h3 className="text-2xl font-bold font-display text-white">
-            Want A Similar High-Converting Store or Portal?
+            Want a Website Concept for Your Business?
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
             Abdul Moeen will build your custom demo homepage first with zero upfront commitment. You only proceed if you love the design and strategy.
@@ -268,7 +268,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
         <p className="text-xs font-mono text-slate-400 tracking-wider">
           created by:{' '}
           <span className="text-[#00F5FF] font-semibold">
-            Abdulmoeen.io
+            Abdulmoeen
           </span>
         </p>
       </div>
