@@ -102,20 +102,20 @@ export const FreeDemoPage: React.FC = () => {
           <div className="glass-card rounded-2xl p-6 border border-slate-800 space-y-3">
             <span className="text-xs font-mono text-[#00F5FF] font-bold">Step 02</span>
             <h3 className="text-base font-bold font-display text-white">
-              48-Hour Demo Build
+              Initial Demo Concept
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Abdul Moeen crafts a customized, high-converting homepage mockup and architecture.
+              A tailored homepage concept is prepared around the business, audience, and requested features.
             </p>
           </div>
 
           <div className="glass-card rounded-2xl p-6 border border-slate-800 space-y-3">
             <span className="text-xs font-mono text-[#00F5FF] font-bold">Step 03</span>
             <h3 className="text-base font-bold font-display text-white">
-              Video Review &amp; Plan
+              Review &amp; Next Steps
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Receive a private Loom walkthrough showing the conversion layout &amp; ad strategy.
+              Review the proposed layout together and agree on any changes or next steps.
             </p>
           </div>
 
@@ -142,10 +142,10 @@ export const FreeDemoPage: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl sm:text-2xl font-bold font-display text-white">
-                Interactive Revenue &amp; ROAS Calculator
+                Illustrative Revenue Scenario Calculator
               </h2>
               <p className="text-xs text-slate-400">
-                Simulate how our high-velocity funnels turn traffic into profitable sales.
+                Explore how different traffic, conversion, and order-value assumptions affect a sample scenario.
               </p>
             </div>
           </div>
@@ -198,7 +198,7 @@ export const FreeDemoPage: React.FC = () => {
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 font-mono">
                   <span>0.8% (Avg Store)</span>
-                  <span>2.8% (TRINOVA Optimized)</span>
+                  <span>2.8% (Example scenario)</span>
                   <span>6.0% (High-Ticket)</span>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export const FreeDemoPage: React.FC = () => {
               
               <div className="space-y-1">
                 <span className="text-[11px] font-mono uppercase text-slate-400">
-                  Projected Monthly Revenue
+                  Illustrative Monthly Revenue
                 </span>
                 <div className="text-3xl sm:text-4xl font-display font-black text-[#00F5FF] tabular-nums">
                   ${projectedRevenue.toLocaleString()}
@@ -250,7 +250,7 @@ export const FreeDemoPage: React.FC = () => {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-[#112240] text-center">
-                  <div className="text-xs font-mono text-slate-400">Projected ROAS</div>
+                  <div className="text-xs font-mono text-slate-400">Illustrative ROAS</div>
                   <div className="text-lg font-bold text-emerald-400 tabular-nums mt-0.5">
                     {projectedROAS}x
                   </div>
@@ -258,7 +258,7 @@ export const FreeDemoPage: React.FC = () => {
               </div>
 
               <div className="text-[11px] font-mono text-slate-400">
-                Based on sub-second load times, 1-click checkout upsells &amp; server-side tracking.
+                Illustrative estimate only. Actual results depend on traffic costs, offer, pricing, audience, website experience, and many other factors. This is not a forecast or guarantee.
               </div>
 
             </div>
@@ -277,7 +277,7 @@ export const FreeDemoPage: React.FC = () => {
               Request Your Free Demo Homepage
             </h2>
             <p className="text-xs sm:text-sm text-slate-300">
-              Direct submission to Abdul Moeen. Response guaranteed within 15 minutes.
+              Your request will open a WhatsApp conversation. Response time may vary.
             </p>
           </div>
 
@@ -371,7 +371,7 @@ export const FreeDemoPage: React.FC = () => {
 
             {submitted && (
               <div className="p-4 rounded-xl bg-emerald-500/20 border border-emerald-400 text-emerald-300 text-xs text-center space-y-2">
-                <div className="font-bold">✓ Free Demo Request Dispatched!</div>
+                <div className="font-bold">✓ WhatsApp Message Prepared</div>
                 <div>
                   Abdul Moeen will initiate your demo. You can also write directly to{' '}
                   <a href={`mailto:${CONTACT_INFO.email}`} className="text-white underline font-mono">
