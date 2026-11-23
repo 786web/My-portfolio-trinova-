@@ -18,10 +18,10 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
 
   const filterTabs = [
     { id: 'all', label: 'All Projects' },
-    { id: 'shopify', label: 'Shopify Plus' },
-    { id: 'wordpress', label: 'WordPress ACF' },
+    { id: 'shopify', label: 'Shopify' },
+    { id: 'wordpress', label: 'WordPress' },
     { id: 'ecommerce', label: 'E-Commerce' },
-    { id: 'leads', label: 'High-Ticket Leads' },
+    { id: 'leads', label: 'Lead Generation' },
   ];
 
   const filteredProjects = PROJECTS.filter((project) => {
