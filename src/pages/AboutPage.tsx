@@ -66,11 +66,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Most digital agencies suffer from a critical divide: developers build websites without understanding customer psychology or advertising cost-per-click, while marketers run ad campaigns to slow, unoptimized landing pages that leak conversions.
+              A business website should do more than look attractive. It should explain what the business offers, work smoothly on mobile, and make the next step clear for visitors.
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              At TRINOVA, we bridge that divide. Every Shopify and WordPress platform is constructed with obsessive speed optimization (performance-conscious development) and seamless 1-click checkout mechanisms, configured directly to convert incoming traffic from Meta, Google, and TikTok.
+              At TRINOVA, the focus is on responsive layouts, clear product and service information, accessible contact options, and practical integrations such as WhatsApp inquiries and forms. Additional features are scoped around each business's needs.
             </p>
 
             {/* Core Stats */}
@@ -174,20 +174,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div className="p-4 rounded-xl bg-[#040d1a] border border-slate-800">
-              <div className="text-sm font-bold text-white">WordPress &amp; ACF Pro</div>
-              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Custom PHP, Zero Bloat</div>
+              <div className="text-sm font-bold text-white">WordPress</div>
+              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Business websites &amp; CMS</div>
             </div>
             <div className="p-4 rounded-xl bg-[#040d1a] border border-slate-800">
-              <div className="text-sm font-bold text-white">Shopify &amp; Liquid</div>
-              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Plus Themes &amp; AJAX</div>
+              <div className="text-sm font-bold text-white">E-commerce</div>
+              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Product catalogues &amp; stores</div>
             </div>
             <div className="p-4 rounded-xl bg-[#040d1a] border border-slate-800">
-              <div className="text-sm font-bold text-white">React &amp; TypeScript</div>
-              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">High-Speed Frontends</div>
+              <div className="text-sm font-bold text-white">Modern Web UI</div>
+              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Responsive interfaces</div>
             </div>
             <div className="p-4 rounded-xl bg-[#040d1a] border border-slate-800">
-              <div className="text-sm font-bold text-white">Meta CAPI &amp; GTM</div>
-              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Server-Side Tracking</div>
+              <div className="text-sm font-bold text-white">Business Integrations</div>
+              <div className="text-[11px] font-mono text-[#00F5FF] mt-0.5">Forms &amp; WhatsApp</div>
             </div>
           </div>
         </div>
