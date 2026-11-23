@@ -333,7 +333,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Auto-converting multi-currency localization</span>
+                          <span>Order confirmation steps and clear customer instructions</span>
                         </div>
                       </div>
                     </div>
@@ -431,7 +431,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Stripe, PayPal, JazzCash &amp; Easypaisa Payment Orders</span>
+                <span>Product Catalogue, Cart &amp; WhatsApp Orders</span>
               </li>
             </ul>
 
@@ -636,7 +636,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   <option value="Shopify & E-Commerce Store">Shopify &amp; E-Commerce Store</option>
                   <option value="WordPress Custom Portal">WordPress Custom Portal</option>
                   <option value="Paid Ads & Lead Funnel">Paid Ads &amp; Lead Funnel</option>
-                  <option value="Payment Gateway Integration">Payment Gateway Integration</option>
+                  <option value="E-commerce & Order Flow">E-commerce &amp; Order Flow</option>
                 </select>
               </div>
 
