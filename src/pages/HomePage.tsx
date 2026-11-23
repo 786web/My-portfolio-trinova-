@@ -673,9 +673,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-xl bg-[#00F5FF] hover:bg-[#4df8ff] text-[#0A192F] font-black text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(0,245,255,0.4)] flex items-center justify-center gap-2"
+              disabled={isSaving}
+              className="w-full py-3.5 rounded-xl bg-[#00F5FF] hover:bg-[#4df8ff] disabled:opacity-60 disabled:cursor-wait text-[#0A192F] font-black text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(0,245,255,0.4)] flex items-center justify-center gap-2"
             >
-              <span>Submit &amp; Open WhatsApp Chat</span>
+              <span>{isSaving ? 'Preparing your request…' : 'Submit & Open WhatsApp Chat'}</span>
               <Send className="w-4 h-4" />
             </button>
           </form>
