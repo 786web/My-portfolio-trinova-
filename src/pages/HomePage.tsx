@@ -45,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
     'Conversion-focused Shopify Stores',
     'Custom WordPress Portals',
     'Performance-conscious Website Builds',
-    'Meta & Google Paid Funnels',
+    'Landing Pages & Lead Capture',
     'Local Payment & Checkout Flows'
   ];
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
@@ -232,7 +232,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                         : 'text-slate-400 hover:text-white'
                     }`}
                   >
-                    CAPI Funnel
+                    Lead Flow
                   </button>
                   <button
                     onClick={() => setTerminalTab('payments')}
@@ -242,7 +242,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                         : 'text-slate-400 hover:text-white'
                     }`}
                   >
-                    Gateways
+                    Orders
                   </button>
                 </div>
 
@@ -253,27 +253,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                     <div className="space-y-4 text-xs font-mono">
                       <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800 flex items-center justify-between">
                         <div>
-                          <div className="text-slate-400">Mobile Google PageSpeed</div>
-                          <div className="text-xl font-bold text-[#00F5FF]">99 / 100</div>
+                          <div className="text-slate-400">Performance baseline</div>
+                          <div className="text-xl font-bold text-[#00F5FF]">Measured per project</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-slate-400">First Contentful Paint</div>
-                          <div className="text-xl font-bold text-emerald-400">0.82s</div>
+                          <div className="text-slate-400">Loading behavior</div>
+                          <div className="text-xl font-bold text-emerald-400">Tested on target devices</div>
                         </div>
                       </div>
 
                       <div className="space-y-2 text-slate-300">
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Custom Liquid theme · zero heavy app bloat</span>
+                          <span>Responsive layout and clear navigation</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Sub-second AJAX instant cart &amp; checkout drawer</span>
+                          <span>Product browsing and order flow planned around business needs</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Lossless WebP image compression + Cloudflare CDN</span>
+                          <span>Image and asset optimization where appropriate</span>
                         </div>
                       </div>
                     </div>
@@ -283,27 +283,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                     <div className="space-y-4 text-xs font-mono">
                       <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800 flex items-center justify-between">
                         <div>
-                          <div className="text-slate-400">Attributed ROAS</div>
-                          <div className="text-xl font-bold text-emerald-400">Demo metric</div>
+                          <div className="text-slate-400">Lead capture</div>
+                          <div className="text-xl font-bold text-emerald-400">WhatsApp-ready</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-slate-400">Event Match Quality</div>
-                          <div className="text-xl font-bold text-[#00F5FF]">9.4 / 10</div>
+                          <div className="text-slate-400">Form handling</div>
+                          <div className="text-xl font-bold text-[#00F5FF]">Tested on submit</div>
                         </div>
                       </div>
 
                       <div className="space-y-2 text-slate-300">
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Server-Side Conversions API (bypasses iOS 14 blocking)</span>
+                          <span>Clear calls to action and direct contact options</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Intent-driven Google Search ad funnels &amp; PMax</span>
+                          <span>WhatsApp inquiry and lead capture forms</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>High-converting landing page A/B test setups</span>
+                          <span>Optional analytics setup where access is provided</span>
                         </div>
                       </div>
                     </div>
@@ -313,23 +313,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                     <div className="space-y-4 text-xs font-mono">
                       <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800 grid grid-cols-2 gap-2 text-center">
                         <div className="p-2 rounded bg-[#112240] text-slate-200 font-bold">
-                          Stripe &bull; Global
+                          Product Catalogue
                         </div>
                         <div className="p-2 rounded bg-[#112240] text-red-400 font-bold">
-                          JazzCash &bull; PK
+                          Cart / Order Summary
                         </div>
                         <div className="p-2 rounded bg-[#112240] text-emerald-400 font-bold">
-                          Easypaisa &bull; PK
+                          WhatsApp Orders
                         </div>
                         <div className="p-2 rounded bg-[#112240] text-blue-400 font-bold">
-                          PayPal &bull; USD
+                          Payment Options*
                         </div>
                       </div>
 
                       <div className="space-y-2 text-slate-300">
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
-                          <span>Frictionless 1-step checkout with instant verification</span>
+                          <span>Simple order steps and clear customer instructions</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#00F5FF]" />
@@ -413,7 +413,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
 
             <div>
               <h3 className="text-2xl font-bold font-display text-white">
-                High-Velocity Web Development
+                Business Website Development
               </h3>
               <p className="text-sm text-slate-300 mt-2 leading-relaxed">
                 Responsive Shopify and WordPress builds with clear navigation, accessible content, and a streamlined checkout experience.
@@ -423,15 +423,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
             <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Custom Shopify Liquid Themes &amp; Instant AJAX Mini-Carts</span>
+                <span>Responsive business websites and landing pages</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Custom WordPress ACF Pro &amp; High-Ticket Booking Portals</span>
+                <span>Product and service pages with clear navigation</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Stripe, PayPal, JazzCash &amp; Easypaisa Payment Gateways</span>
+                <span>Stripe, PayPal, JazzCash &amp; Easypaisa Payment Orders</span>
               </li>
             </ul>
 
@@ -455,25 +455,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
 
             <div>
               <h3 className="text-2xl font-bold font-display text-white">
-                Paid Acquisition &amp; Lead Generation
+                Landing Pages &amp; Lead Capture
               </h3>
               <p className="text-sm text-slate-300 mt-2 leading-relaxed">
-                Targeted Meta, TikTok, and Google Search campaigns with server-side CAPI tracking configured to bring buying customers.
+                Focused landing pages with clear messaging, mobile-friendly forms, and direct contact options.
               </p>
             </div>
 
             <ul className="space-y-3 text-xs text-slate-300">
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Meta Ads (Facebook &amp; Instagram) with CBO Scaling</span>
+                <span>Clear calls to action and lead capture forms</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Google Search Intent Ads for High-Ticket Client Booking</span>
+                <span>WhatsApp inquiry integration</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#00F5FF] shrink-0" />
-                <span>Server-Side Tracking (Meta CAPI + Google Tag Manager)</span>
+                <span>Form validation and submission feedback</span>
               </li>
             </ul>
 
@@ -481,7 +481,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
               onClick={() => onNavigate('services')}
               className="text-xs font-mono text-[#00F5FF] hover:underline flex items-center gap-1 font-semibold"
             >
-              <span>Explore Paid Ads Funnels</span>
+              <span>Explore Lead Capture Services</span>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
@@ -566,22 +566,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
       <section className="py-8 bg-[#040d1a] border-y border-slate-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-around gap-8 text-xs font-mono text-slate-400 flex-wrap">
           <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-[#00F5FF]">●</span> WORDPRESS &amp; ACF PRO
+            <span className="text-[#00F5FF]">●</span> WORDPRESS &amp; CMS
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-[#00F5FF]">●</span> SHOPIFY &amp; LIQUID
+            <span className="text-[#00F5FF]">●</span> SHOPIFY &amp; E-COMMERCE
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
             <span className="text-[#00F5FF]">●</span> REACT &amp; TAILWIND
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-[#00F5FF]">●</span> STRIPE &amp; JAZZCASH
+            <span className="text-[#00F5FF]">●</span> WHATSAPP &amp; FORMS
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-[#00F5FF]">●</span> META CAPI SERVER TRACKING
+            <span className="text-[#00F5FF]">●</span> SEO BASICS &amp; SITEMAPS
           </span>
           <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-[#00F5FF]">●</span> GOOGLE ADS &amp; PMAX
+            <span className="text-[#00F5FF]">●</span> RESPONSIVE DESIGN
           </span>
         </div>
       </section>
