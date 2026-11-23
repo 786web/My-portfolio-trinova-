@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['WordPress ACF Pro', 'Google Search Ads', 'WhatsApp Cloud API', 'HubSpot CRM', 'REST API'],
     client: 'Concept project',
-    country: 'Illustrative demo',
+    country: 'Concept demo',
     featured: true,
   },
   {
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['WordPress Core', 'Custom PHP Engine', 'Local SEO Schema', 'Stripe & JazzCash', 'Tailwind'],
     client: 'Concept project',
-    country: 'Illustrative demo',
+    country: 'Concept demo',
     featured: true,
   },
   {
@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['Shopify Plus', 'TikTok Pixel', 'JazzCash & Easypaisa', 'Stripe', 'Alpine.js'],
     client: 'Concept project',
-    country: 'Illustrative demo',
+    country: 'Concept demo',
     featured: false,
   },
   {
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['WooCommerce', 'B2B Wholesale API', 'Stripe B2B', 'ERP Integration', 'Tailwind'],
     client: 'Concept project',
-    country: 'Illustrative demo',
+    country: 'Concept demo',
     featured: false,
   },
   {
@@ -140,7 +140,7 @@ export const PROJECTS: Project[] = [
     ],
     techStack: ['WordPress', 'Cal.com Sync', 'Meta Ads Retargeting', 'HIPAA Secure Forms', 'SEO Schema'],
     client: 'Concept project',
-    country: 'Illustrative demo',
+    country: 'Concept demo',
     featured: false,
   },
 ];
@@ -175,7 +175,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Paid Acquisition & Lead Generation',
     subtitle: 'Meta, TikTok & Google Search Funnels',
     badge: 'Growth Engine',
-    description: 'We eliminate vanity metrics like clicks and impressions. We engineer end-to-end paid acquisition funnels that drive verified, qualified inquiries and direct sales.',
+    description: 'We help businesses plan and improve paid acquisition campaigns with clear objectives, suitable landing pages, and measurement where platform access allows.',
     features: [
       'Meta Ads (Facebook & Instagram) Campaign Structure & CBO Scaling',
       'High-Intent Google Search & Performance Max Campaigns',
@@ -201,11 +201,11 @@ export const SERVICES: ServiceItem[] = [
     badge: 'Fintech & Checkout',
     description: 'Seamlessly accept payments from any country. We integrate leading global processors alongside regional Pakistani & Middle Eastern payment channels.',
     features: [
-      'Stripe & PayPal Merchant Integration with 1-Click Buy',
-      'JazzCash & Easypaisa Direct Payment Gateways (For Pakistan & Regional Stores)',
+      'Supported international payment integrations, subject to merchant eligibility and provider approval',
+      'Supported local payment integrations, subject to provider approval and technical access',
       'Automated Multi-Currency Switching & Geo-IP Location Pricing',
-      'Fraud Prevention & 3D Secure Verification Protocols',
-      'Instant Invoice Generation & Automated Receipts',
+      'Available fraud-prevention and 3D Secure options supported by the selected provider',
+      'Invoice and receipt workflows where supported by the selected platform',
     ],
     deliverables: [
       'Fully Tested Live Gateway Integration in Sandbox & Production',
@@ -222,7 +222,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Speed Optimization & CRO Funnels',
     subtitle: 'Turn Visitors into Paying Customers',
     badge: 'Conversion Rate',
-    description: 'Every 1-second delay in page load burns 7% of conversions. We aggressively optimize code, database queries, and checkout steps to maximize revenue per visitor.',
+    description: 'We review loading performance, page structure, and checkout friction, then prioritize practical improvements based on the website and its users.',
     features: [
       'PageSpeed and Core Web Vitals optimization, with results depending on the project environment',
       'Database Query Cleanup, Asset Minification & Image Compression',
@@ -309,7 +309,7 @@ export const FAQS: FAQItem[] = [
   {
     category: 'Lead Generation',
     question: 'How do you measure campaign performance?',
-    answer: 'We do not run vanity awareness campaigns. We deploy intent-driven Google Search campaigns targeting high-intent buyer terms, combined with server-side Meta Conversions API (CAPI) and high-converting landing pages that capture verified phone numbers and buyer orders. Every dollar spent is tracked to real revenue.',
+    answer: 'We do not run vanity awareness campaigns. We deploy intent-driven Google Search campaigns targeting high-intent buyer terms, combined with server-side Meta Conversions API (CAPI) and high-converting landing pages that capture verified phone numbers and buyer orders. Campaign events can be measured where tracking access and consent allow. Reporting can inform decisions, but sales and return on ad spend are not guaranteed.',
   },
   {
     category: 'Payments',
