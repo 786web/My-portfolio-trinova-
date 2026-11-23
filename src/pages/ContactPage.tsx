@@ -27,7 +27,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [businessType, setBusinessType] = useState('E-Commerce & Shopify');
-  const [budget, setBudget] = useState('$600 - $1,500');
+  const [budget, setBudget] = useState('Not sure yet');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -134,7 +134,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
 
             <div>
               <h3 className="text-base font-bold text-white">Direct WhatsApp</h3>
-              <p className="text-xs text-slate-400 mt-0.5">Average reply time: under 15 mins</p>
+              <p className="text-xs text-slate-400 mt-0.5">WhatsApp is the quickest contact option</p>
             </div>
 
             <div className="p-3 rounded-xl bg-[#040d1a] border border-slate-800">
@@ -239,7 +239,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="e.g. +92 341 7497785"
+                  placeholder="e.g. +92 3XX XXXXXXX"
                   className="w-full px-4 py-2.5 rounded-xl bg-[#040d1a] border border-slate-700 text-white text-sm focus:border-[#00F5FF] outline-none"
                 />
               </div>
@@ -251,10 +251,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                   onChange={(e) => setBudget(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#040d1a] border border-slate-700 text-white text-sm focus:border-[#00F5FF] outline-none cursor-pointer"
                 >
-                  <option value="$100 / Rs 30,000">$100 / Rs 30,000 (Paid Acquired Leads)</option>
-                  <option value="$200 / Rs 40,000">$200 / Rs 40,000 (Web Development)</option>
-                  <option value="$300 / Rs 20,000">$300 / Rs 20,000 (Payment Gateway Setup)</option>
-                  <option value="$500+ / Rs 100k+">$500+ / Rs 100k+ (Complete Enterprise Stack)</option>
+                  <option value="Rs 25,000–50,000">Rs 25,000–50,000 (Paid Acquired Leads)</option>
+                  <option value="Rs 50,000–100,000">Rs 50,000–100,000 (Web Development)</option>
+                  <option value="Under Rs 25,000">Under Rs 25,000 (Payment Gateway Setup)</option>
+                  <option value="Rs 100,000+">Rs 100,000+ (Complete Enterprise Stack)</option>
                 </select>
               </div>
             </div>
