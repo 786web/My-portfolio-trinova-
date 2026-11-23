@@ -53,7 +53,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
           Services Built for Direct Revenue
         </h1>
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-          We combine bespoke web engineering with performance marketing to create scalable customer acquisition engines for brands worldwide.
+          We create responsive business websites, online stores, lead-capture experiences, and practical integrations based on each project's requirements.
         </p>
       </section>
 
