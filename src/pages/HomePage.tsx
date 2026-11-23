@@ -122,7 +122,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-black tracking-tight text-white leading-[1.08]">
                 We Build Websites That Bring <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00F5FF] via-[#4df8ff] to-sky-300 drop-shadow-[0_0_25px_rgba(0,245,255,0.4)]">
-                  REAL Sales,
+                  Better Customer Journeys,
                 </span>{' '}
                 Not Just Clicks.
               </h1>
@@ -647,10 +647,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenProject })
                   onChange={(e) => setQuickBudget(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#040d1a] border border-slate-700 text-white text-sm focus:border-[#00F5FF] outline-none cursor-pointer"
                 >
-                  <option value="Rs 25,000–50,000">Rs 25,000–50,000 (Paid Acquired Leads)</option>
-                  <option value="Rs 50,000–100,000">Rs 50,000–100,000 (Web Development)</option>
-                  <option value="Under Rs 25,000">Under Rs 25,000 (Payment Gateway Setup)</option>
-                  <option value="Rs 100,000+">Rs 100,000+ (Complete Enterprise Stack)</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                  <option value="Rs 25,000–50,000">Rs 25,000–50,000 (Project budget)</option>
+                  <option value="Rs 50,000–100,000">Rs 50,000–100,000 (Project budget)</option>
+                  <option value="Under Rs 25,000">Under Rs 25,000 (Project budget)</option>
+                  <option value="Rs 100,000+">Rs 100,000+ (Project budget)</option>
                 </select>
               </div>
             </div>
