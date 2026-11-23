@@ -167,3 +167,42 @@
 @media (prefers-reduced-motion: reduce) {
   .trinova-3d-object, .trinova-3d-ring-one, .trinova-3d-ring-two { animation: none; }
 }
+
+
+/* Final accessibility and interaction polish */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid #00F5FF;
+  outline-offset: 3px;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+img {
+  max-width: 100%;
+}
+::selection {
+  background: rgba(0, 245, 255, 0.28);
+  color: #ffffff;
+}
+
+/* Refined 3D hero depth and glow */
+.trinova-3d-stage {
+  filter: drop-shadow(0 18px 32px rgba(0, 170, 255, 0.16));
+}
+.trinova-3d-core {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255,255,255,.98) 0%, rgba(118,250,255,.95) 7%, rgba(13,158,201,.92) 27%, rgba(13,49,105,.98) 61%, #050d20 100%);
+}
+.trinova-3d-ring-one,
+.trinova-3d-ring-two {
+  will-change: transform;
+}
+@media (max-width: 640px) {
+  .trinova-3d-stage {
+    filter: drop-shadow(0 12px 22px rgba(0, 170, 255, 0.14));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
