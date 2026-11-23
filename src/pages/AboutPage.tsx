@@ -141,7 +141,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               High-Velocity Production
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Clean, modular coding with mobile-first responsiveness, payment gateway integration, and server-side tracking configurations.
+              Responsive page layouts, product or service content, inquiry forms, and integrations agreed in the project scope.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               Launch &amp; Scaling Sprints
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              We deploy the site to your production domain, run ad traffic funnels, and test continuous conversion rate optimizations.
+              We prepare the website for launch, check key pages and contact flows, and share guidance for future updates.
             </p>
           </div>
 
