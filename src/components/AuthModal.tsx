@@ -100,7 +100,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         provider: 'google',
         options: {
           // Always return OAuth users to the canonical production site.
-          redirectTo: 'https://my-portfolio-trinova.vercel.app/',
+          redirectTo: 'https://trinova-portfolio.devs.surf/',
           // Let each visitor choose their own Google account on shared devices.
           queryParams: {
             prompt: 'select_account',
