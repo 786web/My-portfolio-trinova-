@@ -156,6 +156,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         <div className="grid grid-cols-2 p-1 bg-[#112240] rounded-xl border border-slate-800 mb-5 text-xs font-mono">
           <button
             type="button"
+            disabled={loading}
             onClick={() => {
               setMode('login');
               setErrorMsg(null);
@@ -171,6 +172,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           </button>
           <button
             type="button"
+            disabled={loading}
             onClick={() => {
               setMode('signup');
               setErrorMsg(null);
@@ -202,7 +204,17 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         )}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" aria-busy={loading}>
+          {loading && (
+            <div
+              role="status"
+              aria-live="polite"
+              className="flex items-center justify-center gap-2 rounded-xl border border-[#00F5FF]/25 bg-[#00F5FF]/5 px-3 py-2.5 text-xs text-[#9ffaff]"
+            >
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span>Processing with Supabase. Please wait...</span>
+            </div>
+          )}
           {mode === 'signup' && (
             <div>
               <label className="block text-xs font-mono text-slate-300 mb-1.5">Full Name</label>
@@ -294,7 +306,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               <path fill="#FBBC05" d="M10.54 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.52 2.56 10.78l7.98-6.19Z" />
               <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.9-5.8l-7.73-6c-2.14 1.44-4.89 2.3-8.17 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z" />
             </svg>
-            <span>Continue with Google</span>
+            <span>{loading ? 'Connecting securely...' : 'Continue with Google'}</span>
           </button>
         </div>
 
@@ -305,6 +317,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               Don't have an account yet?{' '}
               <button
                 type="button"
+                disabled={loading}
                 onClick={() => {
                   setMode('signup');
                   setErrorMsg(null);
@@ -319,6 +332,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               Already have an account?{' '}
               <button
                 type="button"
+                disabled={loading}
                 onClick={() => {
                   setMode('login');
                   setErrorMsg(null);
